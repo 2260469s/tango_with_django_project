@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+{% load staticfiles %}
+
 <html>
 
     <head>
@@ -12,7 +15,9 @@
             <strong>{{ boldmessage }}</strong><br/>
         </div>
         <div>
-            <ahref="/rango/about/">About</a><br/>
+            <a href="\rango\about\">About</a><br/>
+			<img src="{% static "images\gaben.jpg" %}"
+			     alt="Picture of Gaben" />
         </div>
     </body>
 
