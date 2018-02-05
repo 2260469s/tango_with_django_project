@@ -15,7 +15,7 @@
             This tutorial has been put together by {{ your_name }}</strong><br/>
         </div>
         <div>
-            <a href="\rango\">Index</a><br/>
+            <a href="{% url 'rango:index' %}">Index</a><br/>
 			<img src="{% static "images\pepe.jpg" %}"
 			     alt="Picture of Pepe" />
 			<img src="{{ MEDIA_URL }}cat.jpg"
