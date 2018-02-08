@@ -13,7 +13,7 @@ from django.contrib.auth.decorators import login_required
 def index(request):
 	category_list = Category.objects.order_by("-likes")[:5]
 	most_viewed_list = Page.objects.order_by("-views")[:5]
-	context_dict = {'categories': category_list, 'most_viewed': most_viewed_list}
+	context_dict = {'categories': category_list, 'pages': most_viewed_list}
 	return render(request, 'rango/index.html', context=context_dict)
 
 def about(request):

@@ -2,10 +2,14 @@
 {% extends 'rango/base.html' %}
 {% load staticfiles %}
 
+{% block title_block %}
+	Index
+{% endblock %}
+
 {% block body_block %}
     <h1>Rango says...</h1>
 	{% if user.is_authenticated %}
-		<div>howdy {{ user.username }}!</div>
+		<div>hey there {{ user.username }}!</div>
 	{% else %}
 		<div>hey there partner!</div>
 	{% endif %}
@@ -26,10 +30,10 @@
     </div>
 	
 	<div>
-	{% if most_viewed %}
+	{% if pages %}
 	<h2>Most Viewed Pages</h2>
 	<ul>
-		{% for page in most_viewed %}
+		{% for page in pages %}
 		<li>
 		<a href="{{ page.url }}">{{ page.title }}</a>
 		</li>
